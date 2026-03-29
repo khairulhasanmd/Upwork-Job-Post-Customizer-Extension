@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Upwork Job Post Customizer",
-  "version": "1.1",
+  "version": "1.5",
   "author": "Md. Khairul Hasan",
   "developer": {
     "name": "Md. Khairul Hasan",
@@ -34,6 +34,7 @@
     "48": "icons/48x48.png",
     "72": "icons/72x72.png",
     "96": "icons/96x96.png",
+    "128": "icons/144x144.png",
     "144": "icons/144x144.png",
     "192": "icons/192x192.png"
   },
