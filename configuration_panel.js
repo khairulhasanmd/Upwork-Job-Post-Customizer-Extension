@@ -1,3 +1,6 @@
+// Browser compatibility shim — normalizes Firefox (browser.*) and Chrome/Edge (chrome.*)
+if (typeof browser === 'undefined') var browser = chrome;
+
 document.addEventListener("click", (e) => {
 
     // function getCurrentWindow() {

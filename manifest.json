@@ -26,6 +26,8 @@
       "strict_min_version": "98.0"
     }
   },
+
+  "minimum_chrome_version": "88",
   
 
   "icons": {
