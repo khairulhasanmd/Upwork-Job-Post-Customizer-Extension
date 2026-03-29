@@ -272,13 +272,34 @@ function mainOperation() {
 
         var strip = document.createElement('div');
         strip.className = 'upwk-score-strip';
-        strip.innerHTML =
-            '<span class="upwk-score-pct" style="color:' + color + '">' + pct + '%</span>' +
-            '<div class="upwk-score-track">' +
-                '<div class="upwk-score-fill" style="width:' + pct + '%;background:' + color + '"></div>' +
-            '</div>' +
-            '<span class="upwk-score-label" style="color:' + color + '">' + label + '</span>' +
-            '<span class="upwk-score-signals">' + result.signals.join(' · ') + '</span>';
+
+        var pctSpan = document.createElement('span');
+        pctSpan.className = 'upwk-score-pct';
+        pctSpan.style.color = color;
+        pctSpan.textContent = pct + '%';
+
+        var track = document.createElement('div');
+        track.className = 'upwk-score-track';
+
+        var fill = document.createElement('div');
+        fill.className = 'upwk-score-fill';
+        fill.style.width = pct + '%';
+        fill.style.background = color;
+        track.appendChild(fill);
+
+        var labelSpan = document.createElement('span');
+        labelSpan.className = 'upwk-score-label';
+        labelSpan.style.color = color;
+        labelSpan.textContent = label;
+
+        var signalsSpan = document.createElement('span');
+        signalsSpan.className = 'upwk-score-signals';
+        signalsSpan.textContent = result.signals.join(' \u00b7 ');
+
+        strip.appendChild(pctSpan);
+        strip.appendChild(track);
+        strip.appendChild(labelSpan);
+        strip.appendChild(signalsSpan);
 
         tile.insertBefore(strip, tile.firstChild);
     }
